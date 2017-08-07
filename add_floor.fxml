@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ems.ui.floor.AddFloorController">
+   <center>
+      <TableView fx:id="tableView" editable="true" prefHeight="252.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID No" />
+          <TableColumn fx:id="eFloorCol" prefWidth="75.0" text="Floor English" />
+            <TableColumn fx:id="bFloorCol" prefWidth="75.0" text="Floor Bangla" />
+            
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#OnSaveAction" prefHeight="35.0" prefWidth="600.0" text="Save">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="editBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnUpdateAction" prefHeight="35.0" prefWidth="600.0" text="Update">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="searchBtn" layoutX="51.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnSearchAction" prefHeight="35.0" prefWidth="600.0" text="Search">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="clearBtn" layoutX="106.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnClearAction" prefHeight="35.0" prefWidth="600.0" text="Clear">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancelBtn" layoutX="158.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnCancelAction" prefHeight="35.0" prefWidth="600.0" text="Cancel">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="90.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtFloorEng" layoutX="96.0" layoutY="14.0" prefHeight="25.0" prefWidth="170.0" promptText="Floor Name English" />
+            <TextField fx:id="txtFloorBan" layoutX="359.0" layoutY="14.0" prefHeight="25.0" prefWidth="170.0" promptText="‡d¬vi bvg">
+               <font>
+                  <Font name="SutonnyMJ" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="fId" layoutX="537.0" layoutY="14.0" prefHeight="25.0" prefWidth="49.0" />
+            <Label layoutX="14.0" layoutY="18.0" text="Floor English" />
+            <Label layoutX="283.0" layoutY="18.0" text="Floor Bangla" />
+            <TextField fx:id="txtSearch" alignment="CENTER" layoutX="96.0" layoutY="50.0" prefHeight="25.0" prefWidth="435.0" promptText="Search Floor Here">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+</BorderPane>

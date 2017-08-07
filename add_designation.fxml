@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ems.ui.designation.AddDesignationController">
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="34.0" text="ID" />
+          <TableColumn fx:id="desigCol" prefWidth="134.0" text="Designation" />
+            <TableColumn fx:id="typeCol" prefWidth="57.0" text="Type" />
+            <TableColumn fx:id="gradeCol" prefWidth="52.0" text="Grade" />
+            <TableColumn fx:id="tiffinCol" prefWidth="58.0" text="Tiffin Bill" />
+            <TableColumn fx:id="attBonusCol" prefWidth="74.0" text="Att. Bonus" />
+            <TableColumn fx:id="holidayCol" prefWidth="64.0" text="Holiday" />
+            <TableColumn fx:id="overTimeCol" prefWidth="48.0" text="OT" />
+            <TableColumn fx:id="lunchBillCol" prefWidth="78.0" text="Lunch Bill" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#OnSaveAction" prefHeight="30.0" prefWidth="600.0" text="Save">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="editBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnUpdateAction" prefHeight="30.0" prefWidth="600.0" text="Update">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="clearBtn" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnClearAction" prefHeight="30.0" prefWidth="600.0" text="Clear">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancelBtn" layoutX="166.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnCancelAction" prefHeight="30.0" prefWidth="600.0" text="Cancel">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children></HBox>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="169.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="28.0" layoutY="18.0" text="Designation" />
+            <TextField fx:id="txtDesig" layoutX="103.0" layoutY="14.0" prefHeight="25.0" prefWidth="189.0" />
+            <Label layoutX="28.0" layoutY="49.0" text="Type" />
+            <ComboBox fx:id="comType" layoutX="103.0" layoutY="45.0" prefHeight="25.0" prefWidth="130.0" />
+            <Label layoutX="28.0" layoutY="81.0" text="Grade" />
+            <TextField fx:id="txtGrade" layoutX="103.0" layoutY="77.0" prefHeight="25.0" prefWidth="131.0" />
+            <Label layoutX="28.0" layoutY="115.0" text="Tiffin Bill" />
+            <TextField fx:id="txtTiffinBill" layoutX="103.0" layoutY="111.0" prefHeight="25.0" prefWidth="131.0" />
+            <Label layoutX="303.0" layoutY="18.0" text="Att. Bonus" />
+            <TextField fx:id="txtAttBonus" layoutX="403.0" layoutY="14.0" prefHeight="25.0" prefWidth="131.0" />
+            <Label layoutX="303.0" layoutY="49.0" text="Over Time" />
+            <ComboBox fx:id="comOverTime" layoutX="403.0" layoutY="45.0" prefHeight="25.0" prefWidth="130.0" />
+            <TextField fx:id="txtHoliday" layoutX="403.0" layoutY="77.0" prefHeight="25.0" prefWidth="131.0" />
+            <Label layoutX="303.0" layoutY="81.0" text="Holiday" />
+            <TextField fx:id="txtLunchBill" layoutX="403.0" layoutY="111.0" prefHeight="25.0" prefWidth="131.0" />
+            <Label layoutX="303.0" layoutY="115.0" text="Lunch Bill" />
+            <TextField fx:id="txtId" alignment="CENTER" layoutX="103.0" layoutY="140.0" prefHeight="25.0" prefWidth="432.0" promptText="Search by ID">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></TextField>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
